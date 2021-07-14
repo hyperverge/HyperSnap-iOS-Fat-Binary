@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = "9.0"
   s.license          = { :type => 'Custom', :file => 'LICENSE' }
-  s.source       = { :git => "https://github.com/hyperverge/HyperSnap-iOS-Fat-Binary/tree/test-pod-trunk-push.git", :tag => "#{s.version}"}
+  s.source       = { :git => "https://github.com/hyperverge/HyperSnap-iOS-Fat-Binary.git", :tag => "#{s.version}"}
   s.source_files = 'HyperSnapSDK.framework/Headers/*.h'
   s.public_header_files = "HyperSnapSDK.framework/Headers/*.h"
   s.ios.vendored_frameworks = "HyperSnapSDK.framework"
