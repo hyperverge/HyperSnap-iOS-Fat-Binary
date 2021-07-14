@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
-// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name HyperSnapSDK
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HyperSnapSDK
 import AVFoundation
 import CommonCrypto
 import CoreLocation
@@ -374,8 +374,8 @@ extension HVDocsViewController {
     @objc override dynamic public init()
     @objc deinit
   }
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class HVResponse : ObjectiveC.NSObject {
   @objc public var apiResult: [Swift.String : Swift.AnyObject]? {
@@ -399,8 +399,8 @@ extension HVDocsViewController {
   @objc public var retakeMessage: Swift.String? {
     get
   }
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class HVDocConfig : ObjectiveC.NSObject {
   @objc public var textConfig: HyperSnapSDK.HVDocConfig.DocTextConfig
@@ -445,8 +445,8 @@ extension HVDocsViewController {
     @objc override dynamic public init()
     @objc deinit
   }
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 public struct HVToast {
   public static func setBackgroundColor(_ color: UIKit.UIColor)
@@ -455,3 +455,21 @@ public struct HVToast {
   public static func setMessageAlignment(_ alignment: UIKit.NSTextAlignment)
   public static func setCornerRadius(_ radius: CoreGraphics.CGFloat)
 }
+extension HyperSnapSDK.HyperSnapParams.DocumentType : Swift.Equatable {}
+extension HyperSnapSDK.HyperSnapParams.DocumentType : Swift.Hashable {}
+extension HyperSnapSDK.HyperSnapParams.DocumentType : Swift.RawRepresentable {}
+extension HyperSnapSDK.HyperSnapParams.Region : Swift.Equatable {}
+extension HyperSnapSDK.HyperSnapParams.Region : Swift.Hashable {}
+extension HyperSnapSDK.HyperSnapParams.Region : Swift.RawRepresentable {}
+extension HyperSnapSDK.HyperSnapParams.Product : Swift.Equatable {}
+extension HyperSnapSDK.HyperSnapParams.Product : Swift.Hashable {}
+extension HyperSnapSDK.HyperSnapParams.Product : Swift.RawRepresentable {}
+extension HyperSnapSDK.HyperSnapParams.LivenessMode : Swift.Equatable {}
+extension HyperSnapSDK.HyperSnapParams.LivenessMode : Swift.Hashable {}
+extension HyperSnapSDK.HyperSnapParams.LivenessMode : Swift.RawRepresentable {}
+extension HyperSnapSDK.HyperSnapParams.FaceMatchMode : Swift.Equatable {}
+extension HyperSnapSDK.HyperSnapParams.FaceMatchMode : Swift.Hashable {}
+extension HyperSnapSDK.HyperSnapParams.FaceMatchMode : Swift.RawRepresentable {}
+extension HyperSnapSDK.HVDocConfig.DocumentSide : Swift.Equatable {}
+extension HyperSnapSDK.HVDocConfig.DocumentSide : Swift.Hashable {}
+extension HyperSnapSDK.HVDocConfig.DocumentSide : Swift.RawRepresentable {}

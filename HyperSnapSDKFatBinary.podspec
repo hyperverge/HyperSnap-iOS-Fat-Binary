@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HyperSnapSDKFatBinary"
-  s.version      = "2.6.0"
+  s.version      = "2.6.1.1"
   s.static_framework = true
   s.summary      = "HyperVerge's iOS Framework for capturing documents and faces to be used with our AI Engines"
   s.description  = "HyperSnapSDK is HyperVerge’s documents + face capture framework that captures images at a resolution appropriate for our proprietary Deep Learning OCR and Face Recognition Engines.The framework provides a liveness feature that uses our advanced AI Engines to tell if a captured image is that of a real person or a photograph."
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = "9.0"
   s.license          = { :type => 'Custom', :file => 'LICENSE' }
-  s.source       = { :git => "https://github.com/hyperverge/HyperSnap-iOS-Fat-Binary.git", :tag => "#{s.version}"}
+  s.source       = { :git => "https://github.com/hyperverge/HyperSnap-iOS-Fat-Binary/tree/test-pod-trunk-push.git", :tag => "#{s.version}"}
   s.source_files = 'HyperSnapSDK.framework/Headers/*.h'
   s.public_header_files = "HyperSnapSDK.framework/Headers/*.h"
   s.ios.vendored_frameworks = "HyperSnapSDK.framework"
