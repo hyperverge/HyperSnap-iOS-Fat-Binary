@@ -68,6 +68,15 @@ extension HVDocsViewController {
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
+@_inheritsConvenienceInitializers @objc public class HVSessionResponse : ObjectiveC.NSObject {
+  @objc public var hvError: HyperSnapSDK.HVError? {
+    get
+  }
+  @objc public func isSuccess() -> Swift.Bool
+  @objc public func getHVError() -> HyperSnapSDK.HVError?
+  @objc deinit
+  @objc override dynamic public init()
+}
 @objc @_inheritsConvenienceInitializers public class HVBaseConfig : ObjectiveC.NSObject {
   public var showTrustLogos: Swift.Bool
   public var shouldShowCloseAlert: Swift.Bool
@@ -87,7 +96,7 @@ extension HVDocsViewController {
   @objc public static func setShouldReturnRawResponse(_ shouldReturn: Swift.Bool)
   @objc public static func deleteImageAtUri(_ imageUri: Swift.String)
   @objc public static func sortDictionaryAlphabetically(_ dictionary: [Swift.String : Swift.AnyObject]) -> Swift.String
-  @objc public static func startUserSession(_ transactionId: Swift.String? = nil) -> HyperSnapSDK.HVError?
+  @objc public static func startUserSession(_ transactionId: Swift.String? = nil) -> HyperSnapSDK.HVSessionResponse
   @objc public static func endUserSession()
   @objc deinit
   @objc override dynamic public init()

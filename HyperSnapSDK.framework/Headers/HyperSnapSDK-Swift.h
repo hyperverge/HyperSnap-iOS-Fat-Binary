@@ -685,6 +685,15 @@ SWIFT_CLASS("_TtC12HyperSnapSDK14HVRetakeButton")
 @end
 
 
+SWIFT_CLASS("_TtC12HyperSnapSDK17HVSessionResponse")
+@interface HVSessionResponse : NSObject
+@property (nonatomic, readonly, strong) HVError * _Nullable hvError;
+- (BOOL)isSuccess SWIFT_WARN_UNUSED_RESULT;
+- (HVError * _Nullable)getHVError SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC12HyperSnapSDK15HVSubtitleLabel")
 @interface HVSubtitleLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -773,7 +782,7 @@ SWIFT_CLASS("_TtC12HyperSnapSDK18HyperSnapSDKConfig")
 + (void)setShouldReturnRawResponse:(BOOL)shouldReturn;
 + (void)deleteImageAtUri:(NSString * _Nonnull)imageUri;
 + (NSString * _Nonnull)sortDictionaryAlphabetically:(NSDictionary<NSString *, id> * _Nonnull)dictionary SWIFT_WARN_UNUSED_RESULT;
-+ (HVError * _Nullable)startUserSession:(NSString * _Nullable)transactionId SWIFT_WARN_UNUSED_RESULT;
++ (HVSessionResponse * _Nonnull)startUserSession:(NSString * _Nullable)transactionId SWIFT_WARN_UNUSED_RESULT;
 + (void)endUserSession;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1493,6 +1502,15 @@ SWIFT_CLASS("_TtC12HyperSnapSDK14HVRetakeButton")
 @end
 
 
+SWIFT_CLASS("_TtC12HyperSnapSDK17HVSessionResponse")
+@interface HVSessionResponse : NSObject
+@property (nonatomic, readonly, strong) HVError * _Nullable hvError;
+- (BOOL)isSuccess SWIFT_WARN_UNUSED_RESULT;
+- (HVError * _Nullable)getHVError SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC12HyperSnapSDK15HVSubtitleLabel")
 @interface HVSubtitleLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -1581,7 +1599,7 @@ SWIFT_CLASS("_TtC12HyperSnapSDK18HyperSnapSDKConfig")
 + (void)setShouldReturnRawResponse:(BOOL)shouldReturn;
 + (void)deleteImageAtUri:(NSString * _Nonnull)imageUri;
 + (NSString * _Nonnull)sortDictionaryAlphabetically:(NSDictionary<NSString *, id> * _Nonnull)dictionary SWIFT_WARN_UNUSED_RESULT;
-+ (HVError * _Nullable)startUserSession:(NSString * _Nullable)transactionId SWIFT_WARN_UNUSED_RESULT;
++ (HVSessionResponse * _Nonnull)startUserSession:(NSString * _Nullable)transactionId SWIFT_WARN_UNUSED_RESULT;
 + (void)endUserSession;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
